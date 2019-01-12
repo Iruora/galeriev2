@@ -23,9 +23,9 @@
 					<?php 
 						try
 						{
-							$param='mysql:host=localhost;dbname=galerie';
+							$param='mysql:host=mydb.c2ewwi1jafca.eu-west-1.rds.amazonaws.com;dbname=galerie';
 							$user='root';
-							$password='';
+							$password='rootroot';
 							$bd=new PDO($param,$user,$password);
 							$bd->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 							$table = 'images';

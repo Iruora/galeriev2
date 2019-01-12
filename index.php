@@ -31,7 +31,7 @@
 <br><br>
 <div class="container">
     <div class="row">
-        <img src="./assets/N.png" alt="logo" width="100" height="100" class="col-md-offset-5">
+        
     </div>
 	<div class="row">
 		<form action="" method="POST" enctype="multipart/form-data" class="col-sm-4" style="margin-left:30%" >
@@ -50,9 +50,9 @@
 <?php
 	try
 	{
-		$param='mysql:host=localhost;dbname=galerie';
+		$param='mysql:host=mydb.c2ewwi1jafca.eu-west-1.rds.amazonaws.com;dbname=galerie';
 		$user='root';
-		$password='';
+		$password='rootroot';
 		$bd=new PDO($param,$user,$password);
 		$bd->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
         $table = 'images';
