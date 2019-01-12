@@ -72,7 +72,7 @@
 			$nomimg = str_replace('/', '_', $nomimg);
 			$nomimg = str_replace('@', '_', $nomimg);
 
-            $sql=$bd->prepare("INSERT INTO `images` (`src`) VALUES (:src)");
+            $sql=$bd->prepare("INSERT INTO `images` (`name`,`src`) VALUES (:src,:src)");
 			$sql->bindParam('src', $nomimg);
 			$res=$sql->execute();
 
