@@ -13,11 +13,11 @@
 <body>
 	<?php
 //include the S3 class              
-if (!class_exists('S3'))require_once('S3.php');
+if (!class_exists('S3'))require_once('./S3.php');
  
 //AWS access info
-if (!defined('awsAccessKey')) define('awsAccessKey', 'AKIAJZS6DLUHFMG6LY5Q');
-if (!defined('awsSecretKey')) define('awsSecretKey', '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');
+if (!defined('awsAccessKey')) define('awsAccessKey', 'AKIAJIAATCOUJNY2LTOQ');
+if (!defined('awsSecretKey')) define('awsSecretKey', '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');
  
 //instantiate the class
 $s3 = new S3(awsAccessKey, awsSecretKey);
