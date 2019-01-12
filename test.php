@@ -61,7 +61,7 @@ $s3 = new S3(awsAccessKey, awsSecretKey);
 
                     <li class="col-sm-3">
                         <a class="thumbnail" id="carousel-selector-0">
-                            <img src="../uploads/<?php echo $photo[2]; ?>">
+                            <img src="https://s3-eu-west-1.amazonaws.com/sourours3<?php echo $photo[2]; ?>">
                         </a>
                     </li>
 					<?php $i++;} ?>
@@ -79,7 +79,7 @@ $s3 = new S3(awsAccessKey, awsSecretKey);
                                         <?php
                                         if (count($photos) != 0) {
                                         ?>
-                                            <img src="../uploads/<?php echo $photos[0][2]; ?>" >
+                                            <img src="https://s3-eu-west-1.amazonaws.com/sourours3<?php echo $photos[0][2]; ?>" >
                                         <?php }?>
 									</div>
 								<?php 
@@ -88,7 +88,7 @@ $s3 = new S3(awsAccessKey, awsSecretKey);
 									for ($i = 1; $i < count($photos); $i++ ) {
 								?>
                                     <div class="item" data-slide-number="<?php echo $i;?>">
-                                        <img src="../uploads/<?php echo $photos[$i][2]; ?>" >
+                                        <img src="https://s3-eu-west-1.amazonaws.com/sourours3/<?php echo $photos[$i][2]; ?>" >
 									</div>
 									<?php }?>
                                 </div>
