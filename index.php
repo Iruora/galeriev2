@@ -53,7 +53,7 @@
 	//include the S3 class             
 	try
 	{
-		$param='mysql:host=mydb.cziozwt7vuhe.eu-west-1.rds.amazonaws.com;dbname=galerie';
+		$param='mysql:host=mydb.c2ewwi1jafca.eu-west-1.rds.amazonaws.com;dbname=galerie';
 		$user='root';
 		$password='';
 		$bd=new PDO($param,$user,$password);
