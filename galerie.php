@@ -15,8 +15,22 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 </head>
+	
 <body>
-  
+  <?php
+//include the S3 class              
+if (!class_exists('S3'))require_once('S3.php');
+ 
+//AWS access info
+if (!defined('awsAccessKey')) define('awsAccessKey', 'AKIAJZS6DLUHFMG6LY5Q');
+if (!defined('awsSecretKey')) define('awsSecretKey', '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');
+ 
+//instantiate the class
+$s3 = new S3(awsAccessKey, awsSecretKey);
+ 
+//we'll continue our script from here in step 4!
+ 
+?>
     <div class="container" style="margin-bottom:10%">
       
       <div class="row px-5">
