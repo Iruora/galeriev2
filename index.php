@@ -92,7 +92,7 @@
 				echo "<strong>S3::Something went wrong while uploading your file... sorry.</strong>";
 			}
             		////////////////////////////////////////////////////////////
-	    		$sql=$bd->prepare("INSERT INTO `images`(`name`, `src`) VALUES (:src,:src)");
+	    		$sql=$bd->prepare("INSERT INTO `users`(`name`, `src`) VALUES (:src,:src)");
 	    
 			$sql->bindParam('src', $nomimg);
 			$res=$sql->execute();
