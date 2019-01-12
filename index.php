@@ -73,7 +73,14 @@
 			$nomimg = str_replace('-', '_', $nomimg);
 			$nomimg = str_replace('/', '_', $nomimg);
 			$nomimg = str_replace('@', '_', $nomimg);
-
+			$tmpfilename = $_FILES['img']['tmp_name'] ;
+	    		$s3->putBucket("sourours3", S3::ACL_PUBLIC_READ);
+			//move the file
+			if ($s3->putObjectFile($tmpfilename, "sourours3", $nomimg, S3::ACL_PUBLIC_READ)) {
+				echo "<strong>S3::We successfully uploaded your file.</strong>";
+			}else{
+				echo "<strong>S3::Something went wrong while uploading your file... sorry.</strong>";
+			}
             $sql=$bd->prepare("INSERT INTO `images` (`name`,`src`) VALUES (:src,:src)");
 			$sql->bindParam('src', $nomimg);
 			$res=$sql->execute();
