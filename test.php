@@ -21,6 +21,8 @@
                 <br>
                 <ul class="hide-bullets">
 					<?php 
+						//include the S3 class              
+						if (!class_exists('S3'))require_once('S3.php');
 						try
 						{
 							$param='mysql:host=mydb.c2ewwi1jafca.eu-west-1.rds.amazonaws.com;dbname=galerie';
